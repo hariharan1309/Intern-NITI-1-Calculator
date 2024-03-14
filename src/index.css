@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components{
+    .cal-grid{
+        @apply grid mt-8 grid-cols-[repeat(4,5rem)] grid-rows-[minmax(6rem,auto)_repeat(5,5rem)]
+                        /* columns repeat 4 with 6rem size */ /*rows will have height of 7 rem or higher if we give large input it expands*/
+    }         
+    .span-two{
+        @apply col-span-2
+    }     
+    .output{
+        @apply col-span-full flex flex-col justify-around items-end 
+    }        
+    .last-op{
+        @apply font-semibold text-lg text-white opacity-95
+    }
+    .cur-op{
+        @apply font-bold text-2xl text-white
+
+    }
+    .btn{
+        @apply cursor-pointer text-2xl font-semibold bg-cyan-300 hover:bg-cyan-400
+    }
+}
